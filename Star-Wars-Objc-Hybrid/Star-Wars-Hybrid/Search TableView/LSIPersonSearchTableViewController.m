@@ -60,11 +60,11 @@
             NSLog(@"Error searching for %@: %@", searchBar.text, error);
         }
         
+        // TODO: Save the result and have the UI update itself
         self.people = people;
         [self.tableView reloadData];
     }];
     
-	// TODO: Save the result and have the UI update itself
 }
 
 @end
