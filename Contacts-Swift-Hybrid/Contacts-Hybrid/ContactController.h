@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactController : NSObject
 
+@property (nonatomic, readonly, copy) NSArray *contacts;
+
 @end
 
 NS_ASSUME_NONNULL_END

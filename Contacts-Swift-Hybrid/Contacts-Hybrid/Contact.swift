@@ -8,11 +8,12 @@
 
 import Foundation
 
-class Contact {
-    var name: String
-    var relationships: String?
+@objc
+class Contact: NSObject {
+    @objc var name: String
+    @objc var relationships: String?
     
-    init(name: String, relationships: String? = nil) {
+    @objc init(name: String, relationships: String? = nil) {
         self.name = name
         self.relationships = relationships
     }
