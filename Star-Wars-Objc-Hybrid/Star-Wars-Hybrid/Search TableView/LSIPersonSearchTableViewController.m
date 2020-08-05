@@ -32,18 +32,21 @@
     
 	// TODO: Implement number of rows
 	
-	return 0;
+    return self.people.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
 	
 	// TODO: Implement a custom cell named PersonTableViewCell.swift
+    
 	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
+	LSIPersonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
     
 	// TODO: Set the cell to the current Person object
-	
+    LSIPerson *person = [self.people objectAtIndex:indexPath.row];
+    
+    cell.person = person;
 	
     return cell;
 }
@@ -52,7 +55,7 @@
     
 	
     // TODO: Search for a person using the searchBar.text
-    [LSIPersonController.shared searchForPeopleWith:searchBar.text completion:^(NSArray<LSIPerson *> * people, NSError * error) {
+    [LSIPersonController.sharedController searchForPeopleWithSearchTerm:searchBar.text completionHandler:^(NSArray<LSIPerson *> *people, NSError *error) {
         if (error) {
             NSLog(@"Error searching for %@: %@", searchBar.text, error);
         }
