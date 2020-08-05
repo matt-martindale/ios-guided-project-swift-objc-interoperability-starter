@@ -16,6 +16,10 @@
 
 @property (nonatomic, readonly, copy, nonnull) NSArray<Contact *> *contacts;
 
+- (nonnull Contact *)contactAtIndex: (NSInteger)index;
+
+@property (nonatomic, readonly) NSInteger contactCount;
+
 @end
 
 //NS_ASSUME_NONNULL_END

@@ -33,4 +33,14 @@
     return self.internalsContacts.copy;
 }
 
+- (Contact *)contactAtIndex:(NSInteger)index
+{
+    return [self.internalsContacts objectAtIndex:index];
+}
+
+- (NSInteger)contactCount
+{
+    return self.internalsContacts.count;
+}
+
 @end
