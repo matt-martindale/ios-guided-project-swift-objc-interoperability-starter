@@ -11,7 +11,7 @@
 
 @interface ContactController()
 
-@property (nonatomic) NSMutableArray *internalsContacts;
+@property (nonatomic) NSMutableArray<Contact *> *internalsContacts;
 
 @end
 

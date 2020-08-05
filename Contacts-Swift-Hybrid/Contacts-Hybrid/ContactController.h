@@ -10,12 +10,12 @@
 
 @class Contact;
 
-NS_ASSUME_NONNULL_BEGIN
+//NS_ASSUME_NONNULL_BEGIN
 
 @interface ContactController : NSObject
 
-@property (nonatomic, readonly, copy) NSArray<Contact *> *contacts;
+@property (nonatomic, readonly, copy, nonnull) NSArray<Contact *> *contacts;
 
 @end
 
-NS_ASSUME_NONNULL_END
+//NS_ASSUME_NONNULL_END
